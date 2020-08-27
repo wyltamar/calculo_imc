@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" href="/img/favicon.ico" />
+    <title>Cálculo IMC</title>
+
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+      integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z"
+      crossorigin="anonymous"
+    />
+    <link href="/css/styles.css" rel="stylesheet" />
+  </head>
+
+  <body>
+    <div class="container-fluid">
+      <h1>Cálculo do IMC</h1>
+
+      <form name="frm">
+        <label for="peso">Peso(kg):</label>
+        <input
+          type="text"
+          id="txtPeso"
+          size="14"
+          name="peso"
+          placeholder="Ex. 90,5"
+        /><br /><br />
+        <label for="altura">Altura(m):</label>
+        <input
+          type="text"
+          id="txtAltura"
+          name="altura"
+          size="14"
+          placeholder="Ex. 1,78"
+          onfocus="this.value = '';"
+        /><br /><br />
+        <input
+          type="button"
+          value="Calcular IMC"
+          id="btnCalc"
+          onclick="calculaImc()"
+        />
+        <input type="button" value="Limpar" id="btnLimpar" onclick="limpar()" />
+        <br /><br />
+      </form>
+      <div class="saidas">
+        <label for="imc"><strong>IMC:</strong></label>
+        <input
+          type="text"
+          id="txtImc"
+          name="textImc"
+          disabled="true"
+          size="2"
+        /><br /><br />
+        <label for="classificacao"><strong>Classificação:</strong></label>
+        <label for="abaixoPeso" id="lblAbxPeso">Abaixo do peso</label>
+        <input type="checkbox" name="abaixoPeso" id="abaixoPeso" disabled />
+        <label for="pesoNormal" id="lblPsoNormal">Peso Normal</label>
+        <input type="checkbox" id="pesoNormal" disabled />
+        <label for="sobrepeso" id="lblSbrPeso">Sobrepeso</label>
+        <input type="checkbox" id="sobrepeso" disabled />
+        <label for="obesiade" id="lblObesidade">Obesidade</label>
+        <input type="checkbox" id="obesidade" disabled />
+        <label for="obesidadeGrave" id="lblObsGrave">Obesidade Grave</label>
+        <input type="checkbox" id="obesidadeGrave" disabled />
+        <img src="/img/imc.jpg" alt="Dois pés na balança" id="balanca" />
+      </div>
+      <main>
+        <article>
+          <h2>Obesidade</h2>
+          <p>
+            A obesidade é o acúmulo de gordura no corpo causado quase sempre por
+            um consumo de energia na alimentação, superior àquela usada pelo
+            organismo para sua manutenção e realização das atividades do
+            dia-a-dia. Ou seja: a ingestão alimentar é maior que o gasto
+            energético correspondente.
+          </p>
+          <p>
+            Pessoas obesas têm maior probabilidade de desenvolver doenças como
+            pressão alta, diabetes, problemas nas articulações, dificuldades
+            respiratórias, gota, pedras na vesícula e até algumas formas de
+            câncer.
+          </p>
+        </article>
+        <article>
+          <h2>Índice de Massa Corpórea(IMC)</h2>
+          <p>
+            O Índice de Massa Corpórea é reconhecido pela Organização Mundial da
+            Saúde como a principal referência para classificação das diferentes
+            faixas de peso. Embora não deva ser o único parâmetro para definir
+            os riscos relacionados à obesidade, visto que existem diversos
+            outros fatores, como a circunferência abdominal e a taxa de
+            colesterol, ele é muito importante para um primeiro alerta de
+            cuidados importantes que todos devemos de ter além de ser facilmente
+            verificado em um grupo por necessitar de apenas uma fita métrica,
+            uma balança e alguma habilidade com cálculos matemáticos
+            elementares.
+          </p>
+          <article>
+            <h2>Determinação do Índice de Massa Corpórea</h2>
+            <p>
+              O Índice de Massa Corpórea (IMC), é um dos indicadores das
+              condições de saúde mais utilizados mundialmente por profissionais
+              da área de saúde por ser confiável, de simples determinação e de
+              baixo custo. A Organização Mundial da Saúde (OMS) recomenda a
+              utilização do IMC no rastreamento de sobrepeso e obesidade visto
+              que o mesmo é reconhecido como preditor de morbidades e
+              mortalidade de diversas Doenças Crônicas Não Transmissíveis
+              (DCNTs). Para a determinação do IMC bastam o levantamento do peso
+              e da altura dos indivíduos. O cálculo do IMC é obtido pela divisão
+              da massa corporal (em Kg) pelo quadrado da altura, segundo a
+              equação a seguir. IMC = [peso (em kg)] / [altura (em m)2]
+            </p>
+          </article>
+        </article>
+        <h2>Classificação do IMC:</h2>
+
+        <ul class="list-group">
+          <li class="list-group-item">Menor que 18,5 - Abaixo do peso</li>
+          <li class="list-group-item">Entre 18,5 e 24,9 - Peso normal</li>
+          <li class="list-group-item">
+            25 e 29,9 - Sobrepeso(acima do peso desejado)
+          </li>
+          <li class="list-group-item">Entre 30 e 39,9 - Obesidade</li>
+          <li class="list-group-item">Maior ou igual a 40 - Obesidade grave</li>
+        </ul>
+      </main>
+      <footer>Copyright © 2020 Wyltamar Douglas | Por WD Visual mídia.</footer>
+    </div>
+
+    <script src="/js/imc.js"></script>
+  </body>
+  <br />
+</html>
