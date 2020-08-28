@@ -20,7 +20,7 @@ function calculaImc() {
 
   imc = document.getElementById('txtImc');
   imcFormat = peso / (altura * altura);
-  imc.value = imcFormat.toFixed(2).replace('.', ',');
+  imc.value = imcFormat.toFixed(1).replace('.', ',');
 
   if (imc.value.replace(',', '.') < 18.5) {
     abaixoPeso.removeAttribute('disabled');
