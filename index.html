@@ -24,18 +24,19 @@
         <input
           type="text"
           id="txtPeso"
-          size="14"
+          size="10"
           name="peso"
           placeholder="Ex. 90,5"
+          onkeypress="return onlyNumber(event)"
         /><br /><br />
         <label for="altura">Altura(m):</label>
         <input
           type="text"
           id="txtAltura"
           name="altura"
-          size="14"
+          size="10"
           placeholder="Ex. 1,78"
-          onfocus="this.value = '';"
+          onkeypress="return onlyNumber(event)"
         /><br /><br />
         <input
           type="button"

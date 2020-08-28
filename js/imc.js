@@ -1,6 +1,3 @@
-window.onload = function () {
-  alert('Este site faz o cálculo do imc!');
-};
 var peso;
 var altura;
 var imc;
@@ -81,4 +78,17 @@ function limpar() {
   obesidadeGrave.checked = false;
   obesidadeGrave.setAttribute('disabled', '');
   lblObsGrave.style.color = 'black';
+}
+
+function onlyNumber(e) {
+  //prettier-ignore
+  var key = (window.event) ? event.keyCode : e.which;
+  if (key > 47 && key < 58) return true;
+  else {
+    if (key == 8 || key == 0) return true;
+    else {
+      if (key == 44) return true;
+      else return false;
+    }
+  }
 }
