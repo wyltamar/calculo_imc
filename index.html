@@ -3,6 +3,11 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta property="og:title" content="Calculo do IMC" />
+    <meta
+      property="og:description"
+      content="Calculador de IMC - Índice de Massa Corporal "
+    />
     <link rel="icon" href="img/favicon.ico" />
     <title>Cálculo IMC</title>
 
@@ -16,6 +21,14 @@
   </head>
 
   <body background="img/backgraund7.jpg">
+    <div id="fb-root"></div>
+    <script
+      async
+      defer
+      crossorigin="anonymous"
+      src="https://connect.facebook.net/pt_BR/sdk.js#xfbml=1&version=v8.0"
+      nonce="PpcX8PPd"
+    ></script>
     <div class="container-fluid">
       <h1>Cálculo do IMC</h1>
 
@@ -28,6 +41,7 @@
           name="peso"
           placeholder="Ex. 90,5"
           onkeypress="return onlyNumber(event)"
+          onfocus="limparChecks()"
         /><br /><br />
         <label for="altura">Altura(m):</label>
         <input
@@ -37,6 +51,7 @@
           size="10"
           placeholder="Ex. 1,78"
           onkeypress="return onlyNumber(event)"
+          onfocus="limparChecks()"
         /><br /><br />
         <input
           type="button"
@@ -67,6 +82,16 @@
         <input type="checkbox" id="obesidade" disabled />
         <label for="obesidadeGrave" id="lblObsGrave">Obesidade Grave</label>
         <input type="checkbox" id="obesidadeGrave" disabled />
+        <br />
+        <div
+          class="fb-like"
+          data-href="https://wyltamar.github.io/calculo_imc/"
+          data-width=""
+          data-layout="box_count"
+          data-action="like"
+          data-size="small"
+          data-share="true"
+        ></div>
         <img src="img/imc.jpg" alt="Dois pés na balança" id="balanca" />
       </div>
       <main>
@@ -129,7 +154,7 @@
           <li class="list-group-item">Maior ou igual a 40 - Obesidade grave</li>
         </ul>
       </main>
-      <footer>Copyright © 2020 Wyltamar Douglas | Por WD Visual mídia.</footer>
+      <footer>Copyright © 2020 Wyltamar Douglas | Por WD Visual Mídia.</footer>
     </div>
 
     <script src="js/imc.js"></script>
