@@ -59,6 +59,11 @@ function limpar() {
   document.frm.txtPeso.value = '';
   document.frm.txtAltura.value = '';
 
+  limparChecks();
+}
+
+function limparChecks() {
+  imc.value = '';
   abaixoPeso.checked = false;
   abaixoPeso.setAttribute('disabled', '');
   lblAbxPeso.style.color = 'black';

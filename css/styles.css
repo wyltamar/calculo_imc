@@ -50,7 +50,7 @@ form {
 footer {
   padding: 20px;
   font-family: sans-serif;
-  font-size: 10px;
+  text-size: 10px;
   text-align: center;
   background-color: rgb(0, 183, 255);
 }
@@ -59,4 +59,10 @@ footer {
   width: 1400px;
   height: 400px;
   max-width: 100%;
+}
+
+.fb-like {
+  text-align: right;
+  padding-top: 20px;
+  padding-left: 90%;
 }
