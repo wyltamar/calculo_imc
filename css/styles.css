@@ -63,5 +63,6 @@ footer {
 
 .fb-like {
   padding-top: 20px;
-  padding-left: 90%;
+  scroll-padding: initial;
+  max-width: 100%;
 }
