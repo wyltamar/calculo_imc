@@ -5,6 +5,12 @@
     },
     {
       "path": "..\\Exemplo Gustavo"
+    },
+    {
+      "path": "..\\servidor-exemplo"
     }
-  ]
+  ],
+  "settings": {
+    "liveServer.settings.multiRootWorkspaceName": "servidor-exemplo"
+  }
 }
